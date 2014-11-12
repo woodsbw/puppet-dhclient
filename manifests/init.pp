@@ -53,14 +53,18 @@ class dhclient (
     'domain-name-servers'             => true,
     'domain-search'                   => true,
     'host-name'                       => true,
+    'dhcp6.name-servers '             => true,
+    'dhcp6.domain-search'             => true,
     'netbios-name-servers'            => true,
     'netbios-scope'                   => true,
     'interface-mtu'                   => true,
     'rfc3442-classless-static-routes' => true,
     'ntp-servers'                     => true,
+    'dhcp6.fqdn'                      => true,
+    'dhcp6.sntp-servers'              => true,
   }
 
-  $merged_requests = merge ($default_requests,$requests)
+  $merged_requests = merge($default_requests,$requests)
 
   include dhclient::install
   include dhclient::config
