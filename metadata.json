@@ -1,0 +1,17 @@
+{
+  "name": "stchas-dhclient",
+  "version": "0.1.0",
+  "author": "stchas",
+  "summary": "DHCP Client Management",
+  "license": "Apache 2.0",
+  "source": "https://github.com/woodsbw/puppet-dhclient",
+  "project_page": "https://github.com/woodsbw/puppet-dhclient",
+  "issues_url": "https://github.com/woodsbw/puppet-dhclient",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.2.2"
+    }
+  ]
+}
+
