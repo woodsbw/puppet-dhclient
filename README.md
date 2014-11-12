@@ -1,4 +1,4 @@
 puppet-dhclient
 ===============
 
-manage dhclient install and configuration
+Manage dhclient install and configuration.
