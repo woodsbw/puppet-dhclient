@@ -4,7 +4,13 @@
 
 option rfc3442-classless-static-routes code 121 = array of unsigned integer 8;
 
-send host-name = gethostname();
+<% scope.lookupvar('dhclient::merged_sends').sort.each_with_index do |(param, value), index| -%>
+<% if value -%>
+send <%= param -%> = <%= value -%>;
+
+<% end -%>
+<% end -%>
+
 
 request <% scope.lookupvar('dhclient::merged_requests').sort.each_with_index do |(param, value), index| -%>
 <% if value -%>
