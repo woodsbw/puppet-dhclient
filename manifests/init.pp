@@ -42,7 +42,7 @@
 #
 class dhclient (
   $requests = '',
-  $send     = '',
+  $sends     = '',
 ){
 
   $default_requests = {
@@ -65,12 +65,12 @@ class dhclient (
     'dhcp6.sntp-servers'              => true,
   }
   
-  $default_send = {
+  $default_sends = {
     'host-name'  => 'gethostname()',
   }
 
   $merged_requests = merge($default_requests,$requests)
-  $merged_send = merge($default_send,$send)
+  $merged_sends = merge($default_sends,$sends)
 
   include dhclient::install
   include dhclient::config
