@@ -1,6 +1,6 @@
 class dhclient::config {
 
-  file {'/etc/dhcp3/dhclient.conf':
+  file {'/etc/dhcp/dhclient.conf':
     ensure  => present,
     owner   => 'root',
     group   => 'root',
