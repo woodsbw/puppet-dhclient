@@ -67,7 +67,6 @@ class dhclient (
   
   $default_send = {
     'host-name'  => 'gethostname()',
-    'user-class' => 'Username',
   }
 
   $merged_requests = merge($default_requests,$requests)
